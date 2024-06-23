@@ -1,0 +1,14 @@
+ul {
+  list-style: none;
+  font-weight: bold;
+}
+
+.good {
+  color: #028008;
+}
+.neutral {
+  color: #807302;
+}
+.bad {
+  color: #800202;
+}
