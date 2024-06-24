@@ -21,6 +21,9 @@ function App() {
   });
 
   const totalFeedback = values.good + values.neutral + values.bad;
+  const totalPositive = Math.round(
+    ((values.good + values.neutral) / totalFeedback) * 100
+  );
 
   const updateFeedback = (feedbackType) => {
     setValue(
@@ -44,6 +47,7 @@ function App() {
           neutral={values.neutral}
           bad={values.bad}
           total={totalFeedback}
+          totalPositive={totalPositive}
         />
       ) : (
         <Notification />
